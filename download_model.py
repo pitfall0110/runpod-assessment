@@ -1,8 +1,8 @@
 # download_model.py
 import os
-from dotenv import load_env
+from dotenv import load_dotenv
 from huggingface_hub import snapshot_download
-load_env()
+load_dotenv()
 
 snapshot_download(
     repo_id="black-forest-labs/FLUX.1-dev",
