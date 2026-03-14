@@ -2,7 +2,6 @@
 import os
 from dotenv import load_env
 from huggingface_hub import snapshot_download
-
 load_env()
 
 snapshot_download(
