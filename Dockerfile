@@ -13,7 +13,4 @@ RUN pip install --no-cache-dir -r requirements.txt && \
 
 COPY handler.py .
 
-COPY download_model.py .
-RUN python download_model.py
-
 CMD ["python", "-u", "handler.py"]
