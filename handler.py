@@ -16,7 +16,7 @@ def load_pipe():
     dtype = torch.bfloat16 if torch.cuda.is_available() else torch.float32
 
     pipe = FluxPipeline.from_pretrained(
-        "black-forest-labs/FLUX.1-dev",
+        "/app/flux1-dev.safetensors",
         torch_dtype=dtype,
     )
 

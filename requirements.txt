@@ -6,3 +6,4 @@ accelerate
 safetensors
 huggingface_hub
 Pillow
+dotenv
