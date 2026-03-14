@@ -13,10 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt && \
 
 COPY handler.py .
 
-ARG HF_TOKEN=""
-ENV HF_TOKEN=${HF_TOKEN}
+ARG HUGGINGFACE_ACCESS_TOKEN
 
-
-RUN wget -q --header="Authorization: Bearer ${HF_TOKEN}" -O /app/flux1-dev.safetensors https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors
+RUN wget -q --header="Authorization: Bearer ${HUGGINGFACE_ACCESS_TOKEN}" -O /app/flux1-dev.safetensors https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors
 
 CMD ["python", "-u", "handler.py"]
